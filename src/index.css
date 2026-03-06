@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", serif;
+  
+  --color-primary: #D97706;
+  --color-primary-light: #F59E0B;
+  --color-primary-dark: #B45309;
+  --color-honey-soft: #FEF3C7;
+  --color-background-light: #F9EBD9;
+  --color-interactive-surface: #FEFBEA;
+  --color-background-dark: #1C1917;
+  --color-text-main: #2D2D2D;
+}
+
+@layer base {
+  body {
+    @apply bg-background-light text-text-main font-sans transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .hexagon {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+
+  .hexagon-clip {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+
+  .hex-input {
+    clip-path: polygon(
+      5px 0%, 
+      calc(100% - 5px) 0%, 
+      100% 5px, 
+      100% calc(100% - 5px), 
+      calc(100% - 5px) 100%, 
+      5px 100%, 
+      0% calc(100% - 5px), 
+      0% 5px
+    );
+  }
+  
+  .glass-panel {
+    @apply backdrop-blur-md bg-white/80;
+  }
+  
+  .honeycomb-bg {
+    background-color: var(--color-background-light);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100' viewBox='0 0 56 100'%3E%3Cpath d='M28 66L0 50L0 16L28 0L56 16L56 50L28 66' fill='none' stroke='%23000' stroke-opacity='0.05' stroke-width='1'/%3E%3C/svg%3E");
+    background-size: 56px 100px;
+  }
+
+  /* Angled borders to reming of hexagons */
+  .angled-card {
+    clip-path: polygon(
+      10px 0%, 
+      calc(100% - 10px) 0%, 
+      100% 10px, 
+      100% calc(100% - 10px), 
+      calc(100% - 10px) 100%, 
+      10px 100%, 
+      0% calc(100% - 10px), 
+      0% 10px
+    );
+  }
+
+  .hexagon-clip {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+
+  .hex-input {
+    clip-path: polygon(
+      8px 0%, 
+      calc(100% - 8px) 0%, 
+      100% 8px, 
+      100% calc(100% - 8px), 
+      calc(100% - 8px) 100%, 
+      8px 100%, 
+      0% calc(100% - 8px), 
+      0% 8px
+    );
+  }
+}
